@@ -15,7 +15,9 @@ public class HelloFrame extends JFrame {
         setSize(new Dimension(400, 200));
         setResizable(false);
         setLayout(new BorderLayout());
-        add(new JLabel("Hello World"), BorderLayout.CENTER);
+        JPanel center = new JPanel();
+        center.add(new JLabel("Hello World"), BorderLayout.CENTER);
+        add(center);
         add(button, BorderLayout.SOUTH);
         button.addActionListener(new ActionListener() {
             @Override
