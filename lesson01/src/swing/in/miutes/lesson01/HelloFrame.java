@@ -1,4 +1,4 @@
-package swing.in.miutes;
+package swing.in.miutes.lesson01;
 
 import javax.swing.*;
 import java.awt.*;

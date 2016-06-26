@@ -1,4 +1,4 @@
-package swing.in.miutes;
+package swing.in.minutes.lesson02;
 
 import javax.swing.*;
 
