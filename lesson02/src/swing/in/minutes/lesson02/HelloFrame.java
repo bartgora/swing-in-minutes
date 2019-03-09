@@ -14,7 +14,6 @@ public class HelloFrame extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(new Dimension(400, 200));
         setResizable(false);
-        setLayout(new BorderLayout());
         JPanel center = new JPanel();
         center.add(new JLabel("Hello World"), BorderLayout.CENTER);
         add(center);

@@ -1,7 +1,13 @@
 package swing.in.minutes.lesson03;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.WindowConstants;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,6 +19,7 @@ public class HelloFrame extends JFrame {
         button = new JButton("Close");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(new Dimension(400, 200));
+        setLocationRelativeTo(null);
         setResizable(false);
         setLayout(new BorderLayout());
         JPanel center = new JPanel();

@@ -13,6 +13,28 @@ public class HelloFrame extends JFrame {
     private JMenuItem exitMenuItem;
 
     public HelloFrame() {
+        initComponents();
+        initListeners();
+    }
+
+    private void initListeners(){
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                close();
+            }
+        });
+
+        exitMenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                close();
+            }
+        });
+
+    }
+
+    private void initComponents(){
         button = new JButton("Close");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(new Dimension(400, 200));
@@ -22,27 +44,12 @@ public class HelloFrame extends JFrame {
         center.add(new JLabel("Hello World"), BorderLayout.CENTER);
         add(center);
         add(button, BorderLayout.SOUTH);
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                close();
-            }
-        });
-
-
         menuBar = new JMenuBar();
         mainMenu = new JMenu("File");
         exitMenuItem = new JMenuItem("Exit");
         mainMenu.add(exitMenuItem);
         menuBar.add(mainMenu);
         setJMenuBar(menuBar);
-
-        exitMenuItem.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                close();
-            }
-        });
     }
 
     private void close() {
