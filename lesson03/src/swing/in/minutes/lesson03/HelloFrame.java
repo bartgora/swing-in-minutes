@@ -36,7 +36,7 @@ public class HelloFrame extends JFrame {
     }
 
     private void close() {
-        int option = JOptionPane.showConfirmDialog(this, "Are your sure?", "exiting....", JOptionPane.YES_NO_OPTION, JOptionPane.ERROR_MESSAGE);
+        int option = JOptionPane.showConfirmDialog(this, "Are your sure?", "exiting....", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
         if (option == JOptionPane.OK_OPTION) {
             dispose();
         }

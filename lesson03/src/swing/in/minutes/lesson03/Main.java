@@ -2,6 +2,7 @@ package swing.in.minutes.lesson03;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 
 public class Main {
 
@@ -9,6 +10,8 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
+                UIManager.put("OptionPane.yesButtonText", "Tak");
+                UIManager.put("OptionPane.noButtonText", "Nie");
                 JFrame hello = new HelloFrame();
                 hello.setVisible(true);
             }
