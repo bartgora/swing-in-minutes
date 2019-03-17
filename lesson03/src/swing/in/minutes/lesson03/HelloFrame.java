@@ -19,13 +19,14 @@ public class HelloFrame extends JFrame {
         button = new JButton("Close");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(new Dimension(400, 200));
-        setLocationRelativeTo(null);
         setResizable(false);
-        setLayout(new BorderLayout());
+        setLocationRelativeTo(null);
         JPanel center = new JPanel();
         center.add(new JLabel("Hello World"), BorderLayout.CENTER);
         add(center);
-        add(button, BorderLayout.SOUTH);
+        JPanel bottom = new JPanel();
+        bottom.add(button);
+        add(bottom, BorderLayout.SOUTH);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
