@@ -25,7 +25,7 @@ public class HelloFrame extends JFrame {
         add(center);
         JPanel bottom = new JPanel();
         bottom.add(button);
-        add(button, BorderLayout.SOUTH);
+        add(bottom, BorderLayout.SOUTH);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
